@@ -1,0 +1,70 @@
+site: Gesko
+title: Gesko
+greetings: "Hi \U0001F44B"
+description: 'just a minimalist, personal blog'
+lang: en-US
+timezone: Europe/Rome
+repo: 'https://github.com/p0wex/Gesko'
+data-theme: dark
+author:
+  name: p0wex
+  bio: 'just a minimalist, personal blog'
+  userpicture: null
+  username: p0wex
+  github: p0wex
+  twitter: P0Wex
+  email: your-email@email.com
+googlewebfonts: >-
+  family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900
+url: ''
+baseurl: ''
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+compress_html:
+  clippings: all
+  comments:
+    - '<!-- '
+    - ' -->'
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+collections:
+  pages:
+    output: true
+    permalink: '/:name'
+  posts:
+    output: true
+    permalink: '/:year/:month/:day/:slug'
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+relative_links:
+  enabled: true
+  collections: false
